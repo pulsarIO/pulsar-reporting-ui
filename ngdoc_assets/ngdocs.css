@@ -1,0 +1,32 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);*/
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../font/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url(../font/OpenSans-Light.ttf);
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #919191;
+}
+h1, h2, h3, h4, h5, h6{
+  color: #666666;
+}
+a{
+  color: #008ed6;
+}
+a.brand{
+  font-family: 'Open Sans Light', sans-serif;
+}
+.navbar .nav{
+  display: none;
+}
+.navbar .nav.menu{
+  display: block;
+}
+.navbar-inner{
+  background: white;
+}
+

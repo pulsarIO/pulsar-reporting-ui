@@ -1,0 +1,5 @@
+{
+  "preset": "airbnb",
+  "requirePaddingNewLinesAfterBlocks": null,
+  "excludeFiles" : ["app/bower_components/**"]
+}

@@ -1,0 +1,80 @@
+<form class="form-horizontal">
+  <div class="form-group" ng-repeat="dimension in dimensions" ng-class="{'has-error': dimension.error}">
+    <label class="col-sm-3 control-label">
+      {{dimension.name}}
+    </label>
+
+    <div class="col-sm-9">
+      <div class="btn-group btn-block filter" dropdown auto-close="'outsideClick'">
+
+        <a type="button" class="btn btn-block btn-default dropdown-toggle" ng-class="{'active': model[dimension.name].length}" dropdown-toggle ng-disabled="!dimension.options.length">
+          <i class="fa fa-spinner fa-pulse" ng-show="dimension.wait"></i>
+
+          <em ng-if="dimension.error">
+            Error, no options loaded
+          </em>
+
+          <em ng-if="!dimension.wait && !dimension.error && model[dimension.name] && model[dimension.name].length == 0">
+            Not filtered
+          </em>
+          <span ng-if="!dimension.error && !dimension.wait">
+            <span ng-if="model[dimension.name].length <= visibleOptionsSelected" ng-repeat="option in model[dimension.name]">
+              {{option}}<span ng-show="!$last">, </span>
+            </span>
+            <span ng-if="model[dimension.name].length > visibleOptionsSelected">
+              {{model[dimension.name].length}} of {{dimension.options.length}} selected
+            </span>
+          </span>
+          <i class="fa fa-caret-down dropdown-toggle-caret"></i>
+        </a>
+
+        <ul class="dropdown-menu" ng-click="$event.stopPropagation()" role="menu">
+          <li ng-repeat="option in dimension.options">
+            <a href ng-click="toggleOption(dimension, option)">
+              <i class="fa {{ isOptionSelected(dimension, option) ? 'fa-check-square-o' : 'fa-square-o'}}"></i>
+              {{option}}
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href ng-click="unselectAllOptions(dimension)">
+              <i class="fa fa-clone"></i>
+              Uncheck all
+            </a>
+          </li>
+        </ul>
+        <a ng-click="removeDimension(dimension)" ng-show="editMode" ng-disabled="dimension.locked" class="btn btn-default filter-remove">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group" ng-show="editMode">
+    <label class="col-sm-3">
+
+      <div class="btn-group btn-block" dropdown>
+        <button type="button" class="btn btn-default btn-block dropdown-toggle" dropdown-toggle ng-disabled="dimensions.length >= maxDimensions">
+          {{dimensions.length >= maxDimensions ? 'Max. filters added': 'Add filter'}}<i class="fa fa-caret-down dropdown-toggle-caret"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li ng-repeat="dimensionOption in dimensionOptions" ng-show="!isDimensionAdded(dimensionOption.name)">
+            <a href ng-click="addDimension(dimensionOption)">{{dimensionOption.name}}</a>
+          </li>
+        </ul>
+      </div>
+
+    </label>
+    <div class="col-sm-9">
+      <div class="btn-group btn-block" dropdown auto-close="'outsideClick'">
+        <a type="button" class="btn btn-block btn-default disabled" dropdown-toggle style="text-align: left">
+          -
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-right">
+    <button class="btn btn-primary" ng-if="submitEvent" ng-click="submit()">Submit</button>
+  </div>
+</form>

@@ -1,0 +1,52 @@
+<section class="content-header">
+  <h1>
+    Traffic Analytics Demo Page
+  </h1>
+  <ncy-breadcrumb></ncy-breadcrumb>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row clearfix">
+    <section class="pull-left col-md-9">
+
+      <div ng-repeat="(dimensionName, dimensionVals) in dynamicFilters" ng-show="dimensionVals.length" class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          {{dimensionName}}: ({{dimensionVals.length}}) ...<i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li ng-repeat="dimVal in dimensionVals">
+            <a href ng-click="removeFilter(dimensionName, dimVal)">
+              {{dimVal}}
+              <i class="fa fa-fw fa-times"></i>
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href ng-click="removeAllFilters(dimensionName)">
+              <strong>Remove all</strong>
+              <i class="fa fa-fw fa-times"></i>
+            </a>
+          </li>
+        </ul>
+        &nbsp;
+      </div>
+
+    </section>
+    <section class="pull-right col-md-3">
+      <div class="text-right margin-bottom clearfix">
+        <pr-datepicker start-date="$stateParams.start" end-date="$stateParams.end" callback="changeDateRange" opens="left" class="pull-right"></pr-datepicker>
+      </div> 
+    </section>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12" ui-view="filter"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" ui-view="trend"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" ui-view="grid"></div>
+  </div>
+</section>

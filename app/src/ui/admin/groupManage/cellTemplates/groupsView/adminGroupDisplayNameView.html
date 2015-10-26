@@ -1,0 +1,12 @@
+<div ng-show="!grid.appScope.groupsControllers[row.entity.name].displayNameInLoading">
+  <div class="ui-grid-cell-contents">
+    <span class="grid-tooltip" tooltip="{{ COL_FIELD }}" tooltip-placement="top" tooltip-append-to-body="true">
+      {{COL_FIELD}}
+    </span>
+  </div>
+</div>
+<div ng-show="grid.appScope.groupsControllers[row.entity.name].displayNameInLoading">
+  <span> &nbsp;
+    <i class="fa fa-refresh fa-spin"></i>&nbsp;Loading...
+  </span>
+</div>
