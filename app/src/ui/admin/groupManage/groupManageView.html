@@ -1,0 +1,43 @@
+<div class="box box-default">
+
+  <div class="box-header with-border">
+    <h3 class="box-title"><i class="fa fa-group"></i>&nbsp;Permission Manage</h3>
+
+    <div class="box-tools">
+      <form name="addGroup" >
+        <div class="input-group pull-right add-group-width">
+          <input class="form-control input-sm" name="groupName" ng-pattern="/^[a-zA-Z0-9\s]{1,64}$/"
+                 ng-model="addOperation.newGroupName" placeholder="Add Group" type="text">
+          <div class="input-group-btn">
+            <button class="btn btn-sm btn-default" ng-disabled="!addGroup.groupName.$valid"
+                    ng-click="addNewGroup()"><i class="fa fa-plus-square"></i></button>
+          </div>
+        </div>
+        <div ng-show="!addGroup.$valid" class="pull-right text-red add-group-middle">
+          letters, numbers and space only, max length is 64 &nbsp;&nbsp;</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="box-body">
+
+    <div class="row">
+      <div class="col-md-12">
+        <div ui-grid="groupGrid"
+             ui-grid-pagination
+             ui-grid-auto-resize
+             pr-grid-height
+             pr-grid-height-deep="true" class="grid"></div>
+      </div>
+    </div>
+  </div>
+  <!-- box-body ends -->
+
+  <div class="box-footer"></div>
+
+  <div ng-show="groupsRefresh.loading" class="overlay">
+    <i class="fa fa-refresh fa-spin"></i>
+  </div>
+
+</div>
+

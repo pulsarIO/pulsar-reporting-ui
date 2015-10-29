@@ -1,0 +1,83 @@
+<div ng-show="metricOptions.length">
+  <label>
+    Metrics
+  </label>
+  <table class="table metric-detail">
+    <tbody>
+      <tr>
+        <th style="width: 25%;"><em>Metric</em></th>
+        <th><em>Aggregation</em></th>
+        <th><em>Alias</em></th>
+        <th style="width: 50px;"></th>
+      </tr>
+
+      <!-- Mutiple Metrics -->
+      <tr class="metric" ng-if="multiple" ng-repeat="metric in metrics">
+        <td class="metric-name">
+          {{metric.name}}
+        </td>
+        <td class="metric-aggregation">
+          <div class="btn-group">
+            <select class="form-control" ng-model="metric.type">
+              <option ng-repeat="aggregationOption in aggregationOptions" ng-selected="{{aggregationOption == metric.type}}" value="{{aggregationOption}}">
+                {{aggregationOption }}
+              </option>
+            </select>
+          </div>
+        </td>
+        <td class="metric-alias">
+          <input type="text" ng-model="metric.alias" class="form-control input-sm" placeholder="Please enter metric alias..."/>
+        </td>
+        <td class="metric-remove">
+          <button type="button" class="btn btn-default btn-sm" ng-click="removeMetric($index)">
+            <i class="fa fa-close"></i>
+          </button>
+        </td>
+      </tr>
+      <tr ng-if="multiple">
+        <td class="metric-add">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" data-placeholder="Please select">
+              <span class="fa fa-plus"></span> Add a metric
+            </button>
+            <ul class="dropdown-menu">
+              <li ng-repeat="metricOption in metricOptions">
+                <a href ng-click="addMetric(metricOption.name)">{{metricOption.name}}</a>
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>-</td>
+        <td>-</td>
+        <td></td>
+      </tr>
+
+      <!-- Single metric mode -->
+      <tr class="metric" ng-if="!multiple">
+        <td class="metric-name">
+          <div class="form-group">
+            <select class="form-control" ng-model="metrics[0].name" ng-change="selectMetric(metrics[0].name)">
+              <option value="">-- Choose metric --</option>
+              <option ng-repeat="metricOption in metricOptions" ng-selected="{{metricOption.name==metrics[0].name}}" value="{{metricOption.name}}">
+                {{metricOption.name}}
+              </option>
+            </select>
+          </div>
+        </td>
+        <td class="metric-aggregation">
+          <div class="form-group">
+            <select class="form-control" ng-model="metrics[0].type">
+              <option class="aggregation-option" ng-repeat="aggregationOption in aggregationOptions" ng-selected="{{aggregationOption == metrics[0].type}}" value="{{aggregationOption}}">
+                {{aggregationOption}}
+              </option>
+            </select>
+          </div>
+        </td>
+        <td class="metric-alias">
+          <div class="form-group"><input type="text" ng-model="metrics[0].alias" class="form-control input-sm"/></div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,17 @@
+<div class="ui-grid-pager-panel" ui-grid-pager ng-show="grid.options.enablePaginationControls">
+  <div class="text-right clearfix">
+    <div class="inline" ng-show="grid.options.totalItems > 0">
+      {{showingLow}} to {{showingHigh}} of {{grid.options.totalItems}} {{totalItemsLabel}}.
+    </div>
+
+    <div class="pagination no-margin btn-group">
+      <button type="button" class="btn btn-default" ng-click="paginationApi.previousPage()" ng-disabled="cantPageBackward()">
+        <i class="fa fa-angle-left"></i>
+      </button>
+
+      <button type="button" class="btn btn-default" ng-click="paginationApi.nextPage()" ng-disabled="cantPageForward()">
+        <i class="fa fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

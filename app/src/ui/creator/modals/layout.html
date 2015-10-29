@@ -1,0 +1,18 @@
+<div class="modal-header">
+  <button type="button" ng-click="$dismiss()" class="close"><i class="fa fa-times"></i></button>
+  <h4 class="modal-title"><i class="fa fa-columns"></i> Select Layout</h4>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div ng-repeat="(key, layout) in model.layouts" class="col-sm-4 margin-bottom dashboard-layout-select">
+      <label ng-class="{active : model.selected == key}">
+        <input type="radio" name="selected" value="{{key}}" ng-model="model.selected" class="hidden">
+        <pr-dashboard layout="key" mock="true" class="clearfix"></pr-dashboard>  
+      </label>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="select()">Save</button>
+  <button class="btn btn-default" ng-click="$dismiss()">Cancel</button>
+</div>

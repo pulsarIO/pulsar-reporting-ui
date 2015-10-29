@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <button type="button" ng-click="$dismiss()" class="close"><i class="fa fa-times"></i></button>
+  <h4 class="modal-title">Edit Metric Widget</h4>
+</div>
+
+<div class="modal-body">
+  <div class="form-group">
+    <label for="widget-title">Widget Title</label>
+    <input type="text" class="form-control" id="widget-title" ng-model="options.title" placeholder="Please enter widget title..."/>
+  </div>
+
+  <div class="form-group">
+    <label for="widget-table">Table</label>
+    <select class="form-control" id="widget-table" ng-model="newParams.table">
+      <option value="">-- Select a table --</option>
+      <option ng-repeat="table in tables" ng-selected="{{table==newParams.table}}" value="{{table}}">
+        {{table}}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group" ng-show="metrics.length">
+    <pr-metric-picker metric-options="metrics" aggregation-options="aggregationTypes" metrics="newParams.metrics" multiple="false"></pr-metric-picker>
+  </div>
+
+  <div class="form-group">
+    <label for="metric-description">Metric Description</label>
+    <input type="text" class="form-control" id="metric-description" ng-model="options.description" placeholder="Please enter metric description..."/>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="save()">Save</button>
+  <button class="btn btn-default" ng-click="$dismiss()">Close</button>
+</div>

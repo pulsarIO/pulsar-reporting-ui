@@ -1,0 +1,19 @@
+.dashboard-layout-select{
+  > label{
+    display: block;
+    cursor: pointer;
+    &.active{
+      cursor: default;
+      .dashboard{
+        border: 1px solid black;
+        margin: -1px;
+        .column{
+          .column-inner{
+            background-color: #dcdcdc;
+            border: 1px solid #dcdcdc;
+          }
+        }
+      }
+    }
+  }
+}

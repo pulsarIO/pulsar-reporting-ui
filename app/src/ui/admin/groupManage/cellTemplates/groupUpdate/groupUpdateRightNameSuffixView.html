@@ -1,0 +1,8 @@
+<div ng-show="row.entity.rightType != '0' " class="btn-group text-center margin-for-grid">
+  <label class="btn btn-xs btn-default" ng-model="row.entity._VIEW"   btn-checkbox> View   </label>
+  <label class="btn btn-xs btn-default" ng-model="row.entity._MANAGE" ng-class="{'btn-default-disabled-active':row.entity._MANAGE && !row.entity.editable}" data-ng-disabled="!row.entity.editable" btn-checkbox> Manage </label>
+</div>
+
+<div ng-show="row.entity.rightType == '0' " class="btn-group text-center margin-for-grid">
+  <label class="btn btn-xs btn-default" ng-model="row.entity.checked"   btn-checkbox> Check   </label>
+</div>
