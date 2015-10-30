@@ -197,15 +197,7 @@ angular.module('pr.demo.traffic', [
         disabled: false,
         chart: {
           xAxis: {
-            axisLabel: 'Time',
-            tickFormat: function(d) {
-              // Update xAxis format
-              if (typeof d !== 'string') {
-                return prUIOptionService.getxAxisTickFormat(d, $scope.params.granularity, prApi.timezone);
-              } else {
-                return d;
-              }
-            }
+            axisLabel: 'Time'
           },
           yAxis: {
             tickFormat: function(n) {
@@ -309,7 +301,7 @@ angular.module('pr.demo.traffic', [
             // Customized the cell to add device filter
             cellTemplate:
               '<div class="ui-grid-cell-contents">' +
-                '<a href title="{{COL_FIELD}}" ng-click="grid.appScope.addFilter(\'devicefamily\', grid.getCellValue(row, col))">' +
+                '<a href title="{{COL_FIELD}}" ng-click="grid.appScope.addFilter(\'devicefamily\', [grid.getCellValue(row, col)])">' +
                   '{{COL_FIELD}}' +
                 '</a>' +
               '</div>'
