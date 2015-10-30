@@ -243,18 +243,19 @@ describe('pr.datasource.sql.prDatasourceSqlService', function() {
     $httpBackend.expectPOST('http://example.com/sql/mydatasource', angular.toJson(payload)).respond(200, angular.toJson(response));
 
     prDatasourceSqlService.getStackDataset({dataSourceName: 'mydatasource'}, params, function(data) {
+
       expect(data).toEqual([{
           key: 'iOS',
-          values: [{x: new Date('2015-10-14T12:22:28.000Z'), y:9999}]
+          values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y:9999}]
         }, {
           key: 'Android',
-          values: [{x: new Date('2015-10-14T12:22:28.000Z'), y:8888}]
+          values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y:8888}]
         }, {
           key:'Windows 7',
-          values: [{x: new Date('2015-10-14T12:22:28.000Z'), y:7777}]
+          values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y:7777}]
         }, {
           key:'Other',
-          values: [{x: new Date('2015-10-14T12:22:28.000Z'), y:6666}]
+          values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y:6666}]
         }
       ]);
     });
@@ -272,31 +273,31 @@ describe('pr.datasource.sql.prDatasourceSqlService', function() {
     prDatasourceSqlService.getStackDataset({dataSourceName: 'mydatasource'}, params, function(data) {
       expect(data).toEqual([{
         key: 'iOS',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 11}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 11}]
       }, {
         key: 'Android',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 12}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 12}]
       }, {
         key: 'Windows 7',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 13}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 13}]
       }, {
         key: 'iOS',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 21}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 21}]
       }, {
         key: 'Android',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 22}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 22}]
       }, {
         key: 'Windows 7',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 23}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 23}]
       }, {
         key: 'iOS',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 31}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 31}]
       }, {
         key: 'Android',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 32}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 32}]
       }, {
         key: 'Windows 7',
-        values: [{x: new Date('2015-10-14T12:22:28.000Z'), y: 33}]
+        values: [{x: moment('2015-10-14 20:22:28', 'YYYY-MM-DD HH:mm:ss').toDate(), y: 33}]
       }]);
     });
 

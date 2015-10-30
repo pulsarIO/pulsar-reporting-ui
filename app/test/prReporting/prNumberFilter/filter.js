@@ -132,6 +132,6 @@ describe('prNumberFilter:intervalDate', function() {
   it('Works on an interval', function() {
     expect($f('intervalDate')(moment(1439276399000))).toEqual('2015-08-10 23:59:59');
     expect($f('intervalDate')(moment(1439276399000), 'MM/DD/YYYY HH:mm:ss')).toEqual('08/10/2015 23:59:59');
-    expect($f('intervalDate')(moment('2015-08-10 23:59:59'), 'MM/DD/YYYY HH:mm:ss', 'MM-DD-YYYY HH:mm:ss', 'GMT')).toEqual('08/10/2015 15:59:59');
+    expect($f('intervalDate')(moment.tz('2015-08-10 23:59:59', 'GMT'), 'MM/DD/YYYY HH:mm:ss', 'YYYY-MM-DD HH:mm:ss', 'GMT')).toEqual('08/10/2015 23:59:59');
   });
 });
