@@ -1,0 +1,42 @@
+<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/prReporting/prDynamicFilter/prDynamicFilter.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDynamicFilter/prDynamicFilter.js#L41" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prDynamicFilter</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">pr.dynamicfilter</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>Displays a list of filters for the user to drilldown in the data. The options for the user are loaded for the data
+source dynamically, using top N queries.</p>
+<p>Optionally it emits ($emit) an event when filters are changed by the user so the data can be refreshed.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;pr-dynamic-filter
+       datasource="{string}"
+       table="{string}"
+       [metric="{string}"]
+       [filters="{object}"]
+       [max-options="{number}"]
+       [max-dimensions="{number}"]
+       [model="{object}"]
+       [drilldown="{boolean}"]
+       [edit-mode="{boolean}"]
+       [visible-options-selected="{number}"]
+       [submit-event="{string}"]
+       [dimensions="{array&lt;object&gt;}"]&gt;
+&lt;/pr-dynamic-filter&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>datasource</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>The data source to be used</p>
+</div></td></tr><tr><td>table</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>The table in the data source to be queried</p>
+</div></td></tr><tr><td>metric <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>The metric to sort by in the top N query. Defaults to <code>count</code>.</p>
+</div></td></tr><tr><td>filters <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>Extra filters that can be added to the query.</p>
+</div></td></tr><tr><td>maxOptions <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>Limit to the number of options in each of the dimension filters. 4 - 10 is recommended.</p>
+</div></td></tr><tr><td>maxDimensions <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>Limit to the number of dimensions in each of the dimension filters. 4 - 10 is recommended.</p>
+</div></td></tr><tr><td>model <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>Key, value pairs of dimension names and arrays of values set by the filter, uses double data binding.</p>
+</div></td></tr><tr><td>drilldown <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>This flag makes the options in a filter depend on the filters previously selected.
+When a filter is selected, the filters below will be cleared of their values. Defaults to <code>false</code></p>
+</div></td></tr><tr><td>editMode <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>This flag allows the user to add and remove dimensions in the filter on the UI.</p>
+</div></td></tr><tr><td>visibleOptionsSelected <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>Number of options that are shown before being collapsed as <code>2 of 4 options selected</code>.</p>
+</div></td></tr><tr><td>submitEvent <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>Displays an extra submit button, which when click will <code>$emit</code> an event with the value of this parameter.
+The second argument is an object with the filters selected.</p>
+</div></td></tr><tr><td>dimensions <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">array&lt;object&gt;</a></td><td><div class="pr-dynamicfilter-directive-page pr-dynamicfilter-directive-prdynamicfilter-page"><p>Dimensions in the filters, uses double data binding. An additional option <code>locked</code>,
+which if true prevents the dimension from being removed.</p>
+</div></td></tr></tbody></table></div>
+</div>

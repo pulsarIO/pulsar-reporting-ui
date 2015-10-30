@@ -1,0 +1,52 @@
+<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/prReporting/prDatasource/prDatasourceSql/prSqlBuilder.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prSqlBuilder.js#L14" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prSqlBuilder</code>
+<div><span class="hint">service in module <code ng:non-bindable="">pr.datasource.sql</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pr-datasource-sql-prsqlbuilder-page"><p>Builds sql statements from params objects. Uses <a href="http://knexjs.org">http://knexjs.org</a> to build the query object</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prSqlBuilder.js#L68" class="view-source icon-eye-open"> </a><h3 id="methods_buildquery">buildQuery(param)</h3>
+<div class="buildquery"><div class="buildquery-page"><p>Formats a query from a set of parameteres to be sent to the sql api</p>
+</div><h5 id="methods_buildquery_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>param</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="buildquery-page"><p>Parameters to build an query to the back end.</p>
+<p>  Object properties:</p>
+<ul>
+<li><code>table</code> <code>{string}</code> - Either pulsar_session or pulsar_event</li>
+<li><code>dimensions</code> <code>{array&lt;object&gt;}</code> Array of dimensions, e.g. [&#39;trafficSource&#39;, &#39;...&#39; ]</li>
+<li><code>metrics</code> <code>{array&lt;object&gt;}</code> Array of metrics, e.g. [&#39;newSessionRate&#39;, &#39;sessionDuration&#39;]</li>
+<li><code>where</code> <code>{object}</code> An object which can contains different kinds of values:<pre><code>where : {
+  site : 0 // string, becomes (site=0)
+  m : [1,2,3] // array, becode (m=&#39;1&#39; or m=&#39;2&#39; ...)
+  str : {
+    operator : &#39;like&#39;
+    val: &#39;%XX%&#39;
+  }
+}
+</code></pre><ul>
+<li><code>string</code> or <code>number</code>, resulting in WHERE key = value</li>
+<li><code>array</code> of values, resulting in WHERE key = value1 or key = value2 or ...</li>
+<li><code>object</code> which must include <code>val</code> and optional <code>operator</code>, e.g.</li>
+</ul>
+</li>
+<li><code>whereRaw</code> : A string with a raw filter</li>
+<li><code>orderBy</code> : column to orderBy in the statement<pre><code>orderBy : &#39;sessions&#39; // simple
+orderBy : {          // more power
+  sessions : &#39;asc&#39;,
+  users : &#39;desc&#39;,
+  ...
+}
+</code></pre></li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_buildquery_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="buildquery-page"><p>Build query in MySQL format</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prSqlBuilder.js#L27" class="view-source icon-eye-open"> </a><h3 id="methods_getalias">getAlias(metric)</h3>
+<div class="getalias"><div class="getalias-page"><p>Gets the name of a column according to the information in the metric or dimension.</p>
+</div><h5 id="methods_getalias_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>metric</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getalias-page"><p>Metric object</p>
+</div></td></tr></tbody></table><h5 id="methods_getalias_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="getalias-page"><p>Alias of the metric</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

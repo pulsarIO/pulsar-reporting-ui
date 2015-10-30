@@ -1,0 +1,178 @@
+<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L27" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prDatasourceSqlService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">pr.datasource.sql</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pr-datasource-sql-prdatasourcesqlservice-page"><p>The prDatasourceSqlService handles queries done to the dataSource backend, it wraps around a configurable $resource object.
+Service which wraps around a $resource object. The service contains several calls.</p>
+<p>It performs tasks transforming requests to sql foramt and intpreting them back in different format for the framework consumption.</p>
+<p>The methods of this service are actions of $resource. See $resource documentation for more details:
+<a href="https://docs.angularjs.org/api/ngResource/service/$resource">https://docs.angularjs.org/api/ngResource/service/$resource</a></p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/pr.datasource.util.sqlbuilder.prSqlBuilder">prSqlBuilder</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L475" class="view-source icon-eye-open"> </a><h3 id="methods_getdatasources">getDataSources(unused, unused, successCallback, errorCallback)</h3>
+<div class="getdatasources"><div class="getdatasources-page"><p>Obtains the list of dataSources available for the user.</p>
+</div><h5 id="methods_getdatasources_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>unused</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdatasources-page"><p>No params are needed</p>
+</div></td></tr><tr><td>unused</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdatasources-page"><p>No payload is needed</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;string&gt;) </a></td><td><div class="getdatasources-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="getdatasources-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_getdatasources_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array&lt;string&gt;</a></td><td><div class="getdatasources-page"><p>An array with the list of datasources which the user can view.</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L87" class="view-source icon-eye-open"> </a><h3 id="methods_getdataset">getDataset(urlParams, param, successCallback, errorCallback)</h3>
+<div class="getdataset"><div class="getdataset-page"><p>Obtains data as an array of objects.</p>
+<pre><code class="lang-js">    [{
+      dimension1: value1,
+      dimension2: value2,
+      metric1: 1111,
+      metrci2: 2222
+    }, {
+      ...
+    }]
+</code></pre>
+</div><h5 id="methods_getdataset_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdataset-page"><p>Object which must include <code>dataSourceName</code>. e.g. <code>{dataSourceName: &#39;pulsar&#39;}</code></p>
+</div></td></tr><tr><td>param</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdataset-page"><p>Params</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="getdataset-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="getdataset-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_getdataset_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdataset-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L523" class="view-source icon-eye-open"> </a><h3 id="methods_getdimensions">getDimensions(urlParams, unused, successCallback, errorCallback)</h3>
+<div class="getdimensions"><div class="getdimensions-page"><p>Obtains the list of the dimensions in a given table and dataSource</p>
+</div><h5 id="methods_getdimensions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdimensions-page"><p>Object which must include <code>dataSourceName</code> and <code>table</code>. e.g.</p>
+<pre><code>{
+  dataSourceName: &#39;pulsar&#39;,
+  table: &#39;pulsar_events&#39;
+}
+</code></pre></div></td></tr><tr><td>unused</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdimensions-page"><p>No payload is needed as is created internally.</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="getdimensions-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="getdimensions-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_getdimensions_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array&lt;object&gt;</a></td><td><div class="getdimensions-page"><p>An array of objects which represent dimensions in a table</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L195" class="view-source icon-eye-open"> </a><h3 id="methods_getgroupedbardata">getGroupedBarData(urlParams, param, successCallback, errorCallback)</h3>
+<div class="getgroupedbardata"><div class="getgroupedbardata-page"><p>Obtains data as a nested array of objects to build a grouped bar chart.</p>
+<pre><code class="lang-js">    [{
+      key: dimension A Value 1,
+      values: [{
+        x: dimension B Value 2,
+        y: metricValue1
+      },{
+        ...
+      }]
+    }, {
+      key: dimension A Value 2,
+      values: [
+        ...
+      ]
+    }]
+</code></pre>
+</div><h5 id="methods_getgroupedbardata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getgroupedbardata-page"><p>Object which must include <code>dataSourceName</code>. e.g. <code>{dataSourceName: &#39;pulsar&#39;}</code></p>
+</div></td></tr><tr><td>param</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getgroupedbardata-page"><p>Params</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="getgroupedbardata-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="getgroupedbardata-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_getgroupedbardata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getgroupedbardata-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L132" class="view-source icon-eye-open"> </a><h3 id="methods_gethistogram">getHistogram(urlParams, param, successCallback, errorCallback)</h3>
+<div class="gethistogram"><div class="gethistogram-page"><p>Obtains data as an array of objects to build a histogram.</p>
+<pre><code class="lang-js">    [{
+      x: dimensionValue1,
+      y: metricValue1
+    }, {
+      ...
+    }]
+</code></pre>
+</div><h5 id="methods_gethistogram_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gethistogram-page"><p>Object which must include <code>dataSourceName</code>. e.g. <code>{dataSourceName: &#39;pulsar&#39;}</code></p>
+</div></td></tr><tr><td>param</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gethistogram-page"><p>Params</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="gethistogram-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="gethistogram-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_gethistogram_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gethistogram-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L451" class="view-source icon-eye-open"> </a><h3 id="methods_getmetricdata">getMetricData(urlParams, param, successCallback, errorCallback)</h3>
+<div class="getmetricdata"><div class="getmetricdata-page"><p>Obtains total data for a single metric.</p>
+<pre><code class="lang-js">    [{
+      key: dimension value 1,
+      values: [{
+        x: date value,
+        y: metricValue1
+      },{
+        ...
+      }]
+    }, {
+      key: dimension value 2,
+      values: [{
+        x: date value,
+        y: metricValue1
+      },{
+        ...
+      }]
+    }]
+</code></pre>
+</div><h5 id="methods_getmetricdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getmetricdata-page"><p>Object which must include <code>dataSourceName</code>. e.g. <code>{dataSourceName: &#39;pulsar&#39;}</code></p>
+</div></td></tr><tr><td>param</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getmetricdata-page"><p>Params</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="getmetricdata-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="getmetricdata-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_getmetricdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getmetricdata-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L562" class="view-source icon-eye-open"> </a><h3 id="methods_getmetrics">getMetrics(urlParams, unused, successCallback, errorCallback)</h3>
+<div class="getmetrics"><div class="getmetrics-page"><p>Obtains the list of the metrics in a given table and dataSource</p>
+</div><h5 id="methods_getmetrics_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getmetrics-page"><p>Object which must include <code>dataSourceName</code> and <code>table</code>. e.g.</p>
+<pre><code>{
+  dataSourceName: &#39;pulsar&#39;,
+  table: &#39;pulsar_events&#39;
+}
+</code></pre></div></td></tr><tr><td>unused</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="getmetrics-page"><p>No payload is needed as is created internally.</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="getmetrics-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="getmetrics-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_getmetrics_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array&lt;object&gt;</a></td><td><div class="getmetrics-page"><p>An array of objects which represent metrics in a table</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L350" class="view-source icon-eye-open"> </a><h3 id="methods_getstackdataset">getStackDataset(urlParams, param, successCallback, errorCallback)</h3>
+<div class="getstackdataset"><div class="getstackdataset-page"><p>Obtains data as 1 or more series, which contain values with a timestamp (date) and a metric.</p>
+<p>If no dimension is selected, a single series is returned. The series represents the total for a metric.</p>
+<p>If a dimension is selelcted, several series are returned. Each series represents a metric value of the dimension.</p>
+<pre><code class="lang-js">    [{
+      key: dimension value 1,
+      values: [{
+        x: date value,
+        y: metricValue1
+      },{
+        ...
+      }]
+    }, {
+      key: dimension value 2,
+      values: [{
+        x: date value,
+        y: metricValue1
+      },{
+        ...
+      }]
+    }]
+</code></pre>
+</div><h5 id="methods_getstackdataset_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getstackdataset-page"><p>Object which must include <code>dataSourceName</code>. e.g. <code>{dataSourceName: &#39;pulsar&#39;}</code></p>
+</div></td></tr><tr><td>param</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getstackdataset-page"><p>Params</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="getstackdataset-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="getstackdataset-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_getstackdataset_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getstackdataset-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L493" class="view-source icon-eye-open"> </a><h3 id="methods_gettables">getTables(urlParams, unused, successCallback, errorCallback)</h3>
+<div class="gettables"><div class="gettables-page"><p>Obtains the list of the tables in a given dataSource</p>
+</div><h5 id="methods_gettables_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gettables-page"><p>Object which must include <code>dataSourceName</code>. e.g. <code>{dataSourceName: &#39;pulsar&#39;}</code></p>
+</div></td></tr><tr><td>unused</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gettables-page"><p>No payload is needed as is created internally.</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;string&gt;) </a></td><td><div class="gettables-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="gettables-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_gettables_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array&lt;string&gt;</a></td><td><div class="gettables-page"><p>An array of names of tables of a dataSource.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,5 +1,0 @@
-{
-  "apiUrl": "http://<pulsarioReportingapi>/prapi/v2",
-  "apiTimezone": "MST",
-  "apiWithCredentials": true
-}

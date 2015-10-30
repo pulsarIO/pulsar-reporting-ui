@@ -1,0 +1,33 @@
+<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/prReporting/prCountTo/prCountTo.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prCountTo/prCountTo.js#L32" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prCountTo</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">pr.countto</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pr-countto-directive-page pr-countto-directive-prcountto-page"><p>The <code>prCountTo</code> directive displays an animated numeric count using jQuery countTo.</p>
+<p><a href="https://github.com/mhuggins/jquery-countTo">https://github.com/mhuggins/jquery-countTo</a></p>
+<p>If the plugin is not present, the contents will be replaced directly in to the html tag.</p>
+<p>The animation lasts for 1 second.</p>
+<p>This directive makes use of both $timeout and setInterval to animate the number.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;pr-count-to
+       value="{number}"
+       decimals="{number}"
+       placeholder="{string}"&gt;
+&lt;/pr-count-to&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY pr-count-to
+     value="{number}"
+     decimals="{number}"
+     placeholder="{string}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="pr-countto-directive-page pr-countto-directive-prcountto-page"><p>The value to animate, animation will happen every time it changes.</p>
+</div></td></tr><tr><td>decimals</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="pr-countto-directive-page pr-countto-directive-prcountto-page"><p>Number of decimals</p>
+</div></td></tr><tr><td>placeholder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="pr-countto-directive-page pr-countto-directive-prcountto-page"><p>Text to show in case the value is not a number: undefined or null</p>
+</div></td></tr></tbody></table></div>
+</div>

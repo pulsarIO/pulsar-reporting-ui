@@ -1,0 +1,61 @@
+<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/ui/admin/resource/resource.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/ui/admin/resource/resource.js#L179" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">GroupRights</code>
+<div><span class="hint">service in module <code ng:non-bindable="">pr.ui.admin.resource</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pr-ui-admin-resource-service-page pr-ui-admin-resource-service-grouprights-page"><p>The <code>GroupRights</code> service is used to talk to backend, dedicated to get all rights belonging to the specified group,
+replace all rights with new rights.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ngResource.service:$resource">$resource</a></code>
+<div class="pr-ui-admin-resource-service-page pr-ui-admin-resource-service-grouprights-page"><p>service defined in angular-resource.js</p>
+</div></li>
+<li><code ng:non-bindable=""><a href="#/api/pr.api.prApiProvider">prApiProvider</a></code>
+<div class="pr-ui-admin-resource-service-page pr-ui-admin-resource-service-grouprights-page"><p>prApi</p>
+</div></li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/ui/admin/resource/resource.js#L204" class="view-source icon-eye-open"> </a><h3 id="methods_query">query(pathParam, dataParam, successCallback, errorCallback)</h3>
+<div class="query"><div class="query-page"><p>Get a group&#39;s belonging rights. Response:</p>
+<pre><code class="lang-js">    [{
+       rightName:&#39;datasource1_VIEW&#39;,
+       rightType:&#39;1&#39;
+    },{
+       rightName:&#39;dashboard1_VIEW&#39;,
+       rightType:&#39;2&#39;
+    }]
+</code></pre>
+</div><h5 id="methods_query_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pathParam</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="query-page"><p>{groupName: &#39;groupNameFoo&#39;}</p>
+</div></td></tr><tr><td>dataParam</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="query-page"><p>{}</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="query-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="query-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_query_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="query-page"><p>the object returned by $resource wrapped api service invoked</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/ui/admin/resource/resource.js#L236" class="view-source icon-eye-open"> </a><h3 id="methods_replaceall">replaceAll(pathParam, dataParam, successCallback, errorCallback)</h3>
+<div class="replaceall"><div class="replaceall-page"><p>ReplaceAll a group&#39;s belonging rights with new rights. Response:</p>
+<pre><code class="lang-js">    [{
+       rightName:&#39;datasource1_VIEW&#39;,
+       rightType:&#39;1&#39;
+    },{
+       rightName:&#39;dashboard1_VIEW&#39;,
+       rightType:&#39;2&#39;
+    }...]
+</code></pre>
+</div><h5 id="methods_replaceall_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pathParam</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="replaceall-page"><p>{groupName: &#39;groupNameFoo&#39;}</p>
+</div></td></tr><tr><td>dataParam</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="replaceall-page"><p>[{
+rightName:&#39;datasource1_VIEW&#39;,
+rightType:&#39;1&#39;
+},{
+rightName:&#39;dashboard1_VIEW&#39;,
+rightType:&#39;2&#39;
+}...]</p>
+</div></td></tr><tr><td>successCallback</td><td><a href="" class="label type-hint type-hint-function">function(array&lt;object&gt;) </a></td><td><div class="replaceall-page"><p>Function to be called on success</p>
+</div></td></tr><tr><td>errorCallback</td><td><a href="" class="label type-hint type-hint-function">function(object) </a></td><td><div class="replaceall-page"><p>Function to be called on error</p>
+</div></td></tr></tbody></table><h5 id="methods_replaceall_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="replaceall-page"><p>the object returned by $resource wrapped api service invoked</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

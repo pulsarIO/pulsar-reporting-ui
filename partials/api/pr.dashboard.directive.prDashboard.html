@@ -1,0 +1,30 @@
+<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/prReporting/prDashboard/prDashboard.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDashboard/prDashboard.js#L29" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prDashboard</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">pr.dashboard</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pr-dashboard-directive-page pr-dashboard-directive-prdashboard-page"><p>The <code>prDashboard</code> creates an interactive dashboard report from a model.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;pr-dashboard
+       layout="{string}"
+       model="{object}"
+       filters="{boolean}"
+       edit-mode="{boolean}"
+       mock="{boolean}"&gt;
+&lt;/pr-dashboard&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>layout</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="pr-dashboard-directive-page pr-dashboard-directive-prdashboard-page"><p>Layout string identifier, must match a layout created with the <code>prDashboardProvider.layout()</code>
+function. Allows to change the layout of the dashboard without changing the model manually.</p>
+</div></td></tr><tr><td>model</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="pr-dashboard-directive-page pr-dashboard-directive-prdashboard-page"><p>Main model representing the dashboard. Must contain the widgets.</p>
+</div></td></tr><tr><td>filters</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="pr-dashboard-directive-page pr-dashboard-directive-prdashboard-page"><p>Query filters to be passed to all the widgets of the dashboard.</p>
+</div></td></tr><tr><td>editMode</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="pr-dashboard-directive-page pr-dashboard-directive-prdashboard-page"><p>Flag to enable or disabled editing of the dashabord. It allows to move, add, or remove
+widgets and layout from the UI.</p>
+</div></td></tr><tr><td>mock</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="pr-dashboard-directive-page pr-dashboard-directive-prdashboard-page"><p>Special flag used when the dashboard is displayed with no contents (and no model) for demo purpose,
+such as selecting a layout.</p>
+</div></td></tr></tbody></table></div>
+</div>

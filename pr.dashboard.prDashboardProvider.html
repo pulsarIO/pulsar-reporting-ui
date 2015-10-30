@@ -1,0 +1,68 @@
+<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/prReporting/prDashboard/prDashboardProvider.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDashboard/prDashboardProvider.js#L18" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prDashboardProvider</code>
+<div><span class="hint">service in module <code ng:non-bindable="">pr.dashboard</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pr-dashboard-prdashboardprovider-page"><p>The dashboardProvider can be used to register layouts and widgets.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDashboard/prDashboardProvider.js#L90" class="view-source icon-eye-open"> </a><h3 id="methods_layout">layout(name, layout)</h3>
+<div class="layout"><div class="layout-page"><p>Registers a new layout.</p>
+</div><h5 id="methods_layout_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="layout-page"><p>of the layout</p>
+</div></td></tr><tr><td>layout</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="layout-page"><p>to be registered.</p>
+<p>  Object properties:</p>
+<ul>
+<li><code>displayName</code></li>
+<li><code>columns</code> - <code>{Array.&lt;object&gt;}</code> - Columns of the dashboard layout<ul>
+<li>mockContent <code>{string}</code> - Text use to display on the column of a mock</li>
+<li>styleClass <code>{string}</code>  CSS Class of the column.</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_layout_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="layout-page"><p>self</p>
+</div></td></tr></table></div>
+</li>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDashboard/prDashboardProvider.js#L66" class="view-source icon-eye-open"> </a><h3 id="methods_widget">widget(name, widget)</h3>
+<div class="widget"><div class="widget-page"><p>Registers a new widget.</p>
+</div><h5 id="methods_widget_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="widget-page"><p>of the widget</p>
+</div></td></tr><tr><td>widget</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="widget-page"><p>to be registered.</p>
+<p>  Object properties:</p>
+<ul>
+<li><code>label</code> - <code>{string=}</code> - The label of the button to add the widget.</li>
+<li><code>icon</code> - <code>{string=}</code> - Font awesome class to create an icon.</li>
+<li><code>template</code> - <code>{string=|function()=}</code> - html template as a string.</li>
+<li><code>templateUrl</code> - <code>{string=}</code> - Path to an html template.</li>
+<li><code>controller</code> - <code>{string=|function()=}</code> - Controller fn that should be
+ associated with newly created scope of the widget or the name of a
+ <a href="http://docs.angularjs.org/api/angular.Module#controller">registered controller</a>
+ if passed as a string.</li>
+<li><p><code>resolve</code> - <code>{Object.&lt;string, function&gt;=}</code> - An optional map of dependencies which should
+ be injected into the controller. If any of these dependencies are promises, the widget
+ will wait for them all to be resolved or one to be rejected before the controller is
+ instantiated.
+ If all the promises are resolved successfully, the values of the resolved promises are
+ injected.</p>
+<p> The map object is:</p>
+<ul>
+<li><code>key</code> - <code>{string}</code>: a name of a dependency to be injected into the controller.</li>
+<li><code>factory</code> - <code>{string|function}</code>: If <code>string</code> then it is an alias for a service.
+Otherwise if function, then it is <a href="http://docs.angularjs.org/api/AUTO.$injector#invoke">injected</a>
+and the return value is treated as the dependency. If the result is a promise, it is
+resolved before its value is injected into the controller.</li>
+</ul>
+</li>
+<li><code>edit</code> - <code>{object}</code> - Edit modus of the widget.<ul>
+<li><code>controller</code> - <code>{string=|function()=}</code> - Same as above, but for the edit mode of the widget.</li>
+<li><code>template</code> - <code>{string=|function()=}</code> - Same as above, but for the edit mode of the widget.</li>
+<li><code>templateUrl</code> - <code>{string=}</code> - Same as above, but for the edit mode of the widget.</li>
+<li><code>resolve</code> - <code>{Object.&lt;string, function&gt;=}</code> - Same as above, but for the edit mode of the widget.</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_widget_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="widget-page"><p>self</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>
