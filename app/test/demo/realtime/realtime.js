@@ -4,6 +4,7 @@
  *  Please see LICENSE for more information.
  *******************************************************************************/
 describe('pr.demo.realtime.RealtimeController', function() {
+  var rootScope;
   var mockScope = {};
   var controller;
 
@@ -35,6 +36,7 @@ describe('pr.demo.realtime.RealtimeMetricController', function() {
 
   beforeEach(angular.mock.module('pr.demo.realtime'));
   beforeEach(angular.mock.inject(function($controller, $rootScope) {
+    rootScope = $rootScope;
     mockScope = $rootScope.$new();
     mockScope.filters = {};
     $controller('RealtimeController', {
@@ -51,8 +53,9 @@ describe('pr.demo.realtime.RealtimeMetricController', function() {
     expect(mockScope.params.table).toEqual('pulsar_event');
     expect(mockScope.options).toEqual(jasmine.any(Object));
     expect(mockScope.options.title).toEqual('Total Events');
-    mockScope.$broadcast('refresh-realtime');
-    expect(mockScope.filters.intervals).toBeDefined();
+
+    rootScope.$broadcast('refresh-realtime');
+    expect(rootScope.filters.intervals).toBeDefined();
   });
 });
 
@@ -110,8 +113,9 @@ describe('pr.demo.realtime.RealtimeGridController', function() {
     expect(mockScope.params.table).toEqual('pulsar_event');
     expect(mockScope.options).toEqual(jasmine.any(Object));
     expect(mockScope.options.title).toEqual('Traffic Source');
-    mockScope.$broadcast('refresh-realtime');
-    expect(mockScope.filters.intervals).toBeDefined();
+
+    rootScope.$broadcast('refresh-realtime');
+    expect(rootScope.filters.intervals).toBeDefined();
   });
 });
 
@@ -139,8 +143,9 @@ describe('pr.demo.realtime.RealtimeRatioController', function() {
     expect(mockScope.params.dataSourceName).toEqual('trackingdruid');
     expect(mockScope.params.table).toEqual('pulsar_event');
     expect(mockScope.options).toEqual(jasmine.any(Object));
-    mockScope.$broadcast('refresh-realtime');
-    expect(mockScope.filters.intervals).toBeDefined();
+
+    rootScope.$broadcast('refresh-realtime');
+    expect(rootScope.filters.intervals).toBeDefined();
   });
 });
 
@@ -169,8 +174,9 @@ describe('pr.demo.realtime.RealtimeDistributionController', function() {
     expect(mockScope.params.table).toEqual('pulsar_event');
     expect(mockScope.options).toEqual(jasmine.any(Object));
     expect(mockScope.options.title).toEqual('Events Distribution');
-    mockScope.$broadcast('refresh-realtime');
-    expect(mockScope.filters.intervals).toBeDefined();
+
+    rootScope.$broadcast('refresh-realtime');
+    expect(rootScope.filters.intervals).toBeDefined();
   });
 });
 

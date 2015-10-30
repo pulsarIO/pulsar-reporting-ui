@@ -214,9 +214,6 @@ angular.module('pr.UIOption')
             },
             xScale: d3.time.scale().nice(d3.time.hour),
             yAxis: {
-              tickFormat: function(n) {
-                return $filter('number')(n, 0);
-              },
               axisLabelDistance: 30
             }
           };
@@ -325,11 +322,6 @@ angular.module('pr.UIOption')
               showMaxMin: false,
               tickFormat: function(d) {
                 return moment(d).format('MMM DD, HH:mm');
-              }
-            },
-            yAxis: {
-              tickFormat: function(n) {
-                return $filter('number')(n, 0);
               }
             }
           };

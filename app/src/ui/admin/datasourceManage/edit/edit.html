@@ -11,7 +11,7 @@
       <div class="form-group">
         <label for="dataSource-name">DataSource Name</label>
         <input required type="text" name="displayName" ng-pattern="/^[a-zA-Z0-9]{1,64}$/" class="form-control" id="dataSource-name" ng-model="datasourceParam.displayName" placeholder="Please enter datasource name..."/>
-        <span class="text-red"> * </span>letters and numbers and only, max length is 64
+        <span class="text-red"> * </span>letters and numbers only, max length is 64
         <div role="alert">
           <span class="error text-red" ng-show="editForm.displayName.$error.pattern">Invalid name format...</span>
         </div>

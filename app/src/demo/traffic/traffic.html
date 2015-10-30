@@ -15,7 +15,7 @@
           {{dimensionName}}: ({{dimensionVals.length}}) ...<i class="fa fa-caret-down"></i>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li ng-repeat="dimVal in dimensionVals">
+          <li ng-repeat="dimVal in dimensionVals track by $index">
             <a href ng-click="removeFilter(dimensionName, dimVal)">
               {{dimVal}}
               <i class="fa fa-fw fa-times"></i>

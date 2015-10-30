@@ -266,7 +266,11 @@ angular.module('pr.demo.realtime', [
         isArea: true,
         chart: {
           height: 120,
-
+          yAxis: {
+            tickFormat: function(n) {
+              return $filter('number')(n, 0);
+            }
+          }
         }
       };
 
@@ -431,7 +435,7 @@ angular.module('pr.demo.realtime', [
       };
     })
 .controller('RealtimeDistributionController',
-    function($scope, prApi) {
+    function($scope, prApi, $filter) {
       // Prepare query params for map
       $scope.params = {
         dataSourceName: 'trackingdruid',
@@ -457,7 +461,14 @@ angular.module('pr.demo.realtime', [
 
       $scope.options = {
         title: 'Events Distribution',
-        disabled: false
+        disabled: false,
+        chart: {
+          yAxis: {
+            tickFormat: function(n) {
+              return $filter('number')(n, 0);
+            }
+          }
+        }
       };
     });
 })();

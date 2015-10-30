@@ -207,6 +207,11 @@ angular.module('pr.demo.traffic', [
               }
             }
           },
+          yAxis: {
+            tickFormat: function(n) {
+              return $filter('number')(n, 0);
+            }
+          },
           // Set the style(stacked, stream, expanded) for stack chart
           sytle: $scope.chartStyle || 'stack',
           dispatch: {
@@ -398,7 +403,11 @@ angular.module('pr.demo.traffic', [
           // Add the changed filter to dynamicFilters, if present. Otherwise create a new one.
           var dynamicFilters = $scope.$stateParams.dynamicFilters ? angular.fromJson($scope.$stateParams.dynamicFilters) : {};
           angular.forEach(newWhere, function(value, key) {
-            dynamicFilters[key] = [value];
+            if (angular.isArray(value)){
+              dynamicFilters[key] = value;
+            } else if (value){
+              dynamicFilters[key] = [value];
+            }
           });
 
           $scope.$state.go('.', {

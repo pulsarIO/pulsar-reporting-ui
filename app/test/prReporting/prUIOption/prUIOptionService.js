@@ -95,10 +95,10 @@ describe('pr.UIOption.prUIOptionService', function() {
   });
 
   it('getxAxisTickFormat', function() {
-    var d = new Date('August 10, 2015 17:05:00');
-    expect(service.getxAxisTickFormat(d, 'hour')).toEqual('Aug 10, 17:05');
-    expect(service.getxAxisTickFormat(d, 'minute')).toEqual('Aug 10, 17:05');
-    expect(service.getxAxisTickFormat(d, 'day')).toEqual('Aug 10');
+    var d = new Date(Date.UTC(115, 7, 10, 17, 05, 0));
+    expect(service.getxAxisTickFormat(d, 'hour', 'UTC')).toEqual('Aug 10, 17:05');
+    expect(service.getxAxisTickFormat(d, 'minute', 'UTC')).toEqual('Aug 10, 17:05');
+    expect(service.getxAxisTickFormat(d, 'day', 'UTC')).toEqual('Aug 10');
   });
 
   it('getIndexCellTemplate', function() {

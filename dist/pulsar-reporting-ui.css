@@ -98,6 +98,9 @@ pr-dynamic-filter .dropdown-menu {
   border-color: #888 !important;
   cursor: not-allowed !important;
 }
+.tooltip {
+  word-break: break-all;
+}
 
 .creator-dropdown-menu {
   max-height: 21em;
