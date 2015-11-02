@@ -1,4 +1,4 @@
-<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L27" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prDatasourceSqlService</code>
+<a href="https://github.com/pulsarIO/pulsar-reporting-ui/edit/master/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L27" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">prDatasourceSqlService</code>
 <div><span class="hint">service in module <code ng:non-bindable="">pr.datasource.sql</code>
 </span>
 </div>
@@ -15,7 +15,7 @@ Service which wraps around a $resource object. The service contains several call
 </li>
 </ul>
 <div class="member method"><h2 id="methods">Methods</h2>
-<ul class="methods"><li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L475" class="view-source icon-eye-open"> </a><h3 id="methods_getdatasources">getDataSources(unused, unused, successCallback, errorCallback)</h3>
+<ul class="methods"><li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L475" class="view-source icon-eye-open"> </a><h3 id="methods_getdatasources">getDataSources(unused, unused, successCallback, errorCallback)</h3>
 <div class="getdatasources"><div class="getdatasources-page"><p>Obtains the list of dataSources available for the user.</p>
 </div><h5 id="methods_getdatasources_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>unused</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdatasources-page"><p>No params are needed</p>
 </div></td></tr><tr><td>unused</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdatasources-page"><p>No payload is needed</p>
@@ -24,7 +24,7 @@ Service which wraps around a $resource object. The service contains several call
 </div></td></tr></tbody></table><h5 id="methods_getdatasources_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array&lt;string&gt;</a></td><td><div class="getdatasources-page"><p>An array with the list of datasources which the user can view.</p>
 </div></td></tr></table></div>
 </li>
-<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L87" class="view-source icon-eye-open"> </a><h3 id="methods_getdataset">getDataset(urlParams, param, successCallback, errorCallback)</h3>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L87" class="view-source icon-eye-open"> </a><h3 id="methods_getdataset">getDataset(urlParams, param, successCallback, errorCallback)</h3>
 <div class="getdataset"><div class="getdataset-page"><p>Obtains data as an array of objects.</p>
 <pre><code class="lang-js">    [{
       dimension1: value1,
@@ -42,7 +42,7 @@ Service which wraps around a $resource object. The service contains several call
 </div></td></tr></tbody></table><h5 id="methods_getdataset_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdataset-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
 </div></td></tr></table></div>
 </li>
-<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L523" class="view-source icon-eye-open"> </a><h3 id="methods_getdimensions">getDimensions(urlParams, unused, successCallback, errorCallback)</h3>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L523" class="view-source icon-eye-open"> </a><h3 id="methods_getdimensions">getDimensions(urlParams, unused, successCallback, errorCallback)</h3>
 <div class="getdimensions"><div class="getdimensions-page"><p>Obtains the list of the dimensions in a given table and dataSource</p>
 </div><h5 id="methods_getdimensions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getdimensions-page"><p>Object which must include <code>dataSourceName</code> and <code>table</code>. e.g.</p>
 <pre><code>{
@@ -55,7 +55,7 @@ Service which wraps around a $resource object. The service contains several call
 </div></td></tr></tbody></table><h5 id="methods_getdimensions_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array&lt;object&gt;</a></td><td><div class="getdimensions-page"><p>An array of objects which represent dimensions in a table</p>
 </div></td></tr></table></div>
 </li>
-<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L195" class="view-source icon-eye-open"> </a><h3 id="methods_getgroupedbardata">getGroupedBarData(urlParams, param, successCallback, errorCallback)</h3>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L195" class="view-source icon-eye-open"> </a><h3 id="methods_getgroupedbardata">getGroupedBarData(urlParams, param, successCallback, errorCallback)</h3>
 <div class="getgroupedbardata"><div class="getgroupedbardata-page"><p>Obtains data as a nested array of objects to build a grouped bar chart.</p>
 <pre><code class="lang-js">    [{
       key: dimension A Value 1,
@@ -79,7 +79,7 @@ Service which wraps around a $resource object. The service contains several call
 </div></td></tr></tbody></table><h5 id="methods_getgroupedbardata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getgroupedbardata-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
 </div></td></tr></table></div>
 </li>
-<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L132" class="view-source icon-eye-open"> </a><h3 id="methods_gethistogram">getHistogram(urlParams, param, successCallback, errorCallback)</h3>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L132" class="view-source icon-eye-open"> </a><h3 id="methods_gethistogram">getHistogram(urlParams, param, successCallback, errorCallback)</h3>
 <div class="gethistogram"><div class="gethistogram-page"><p>Obtains data as an array of objects to build a histogram.</p>
 <pre><code class="lang-js">    [{
       x: dimensionValue1,
@@ -95,7 +95,7 @@ Service which wraps around a $resource object. The service contains several call
 </div></td></tr></tbody></table><h5 id="methods_gethistogram_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gethistogram-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
 </div></td></tr></table></div>
 </li>
-<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L451" class="view-source icon-eye-open"> </a><h3 id="methods_getmetricdata">getMetricData(urlParams, param, successCallback, errorCallback)</h3>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L451" class="view-source icon-eye-open"> </a><h3 id="methods_getmetricdata">getMetricData(urlParams, param, successCallback, errorCallback)</h3>
 <div class="getmetricdata"><div class="getmetricdata-page"><p>Obtains total data for a single metric.</p>
 <pre><code class="lang-js">    [{
       key: dimension value 1,
@@ -122,7 +122,7 @@ Service which wraps around a $resource object. The service contains several call
 </div></td></tr></tbody></table><h5 id="methods_getmetricdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getmetricdata-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
 </div></td></tr></table></div>
 </li>
-<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L562" class="view-source icon-eye-open"> </a><h3 id="methods_getmetrics">getMetrics(urlParams, unused, successCallback, errorCallback)</h3>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L562" class="view-source icon-eye-open"> </a><h3 id="methods_getmetrics">getMetrics(urlParams, unused, successCallback, errorCallback)</h3>
 <div class="getmetrics"><div class="getmetrics-page"><p>Obtains the list of the metrics in a given table and dataSource</p>
 </div><h5 id="methods_getmetrics_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getmetrics-page"><p>Object which must include <code>dataSourceName</code> and <code>table</code>. e.g.</p>
 <pre><code>{
@@ -135,7 +135,7 @@ Service which wraps around a $resource object. The service contains several call
 </div></td></tr></tbody></table><h5 id="methods_getmetrics_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array&lt;object&gt;</a></td><td><div class="getmetrics-page"><p>An array of objects which represent metrics in a table</p>
 </div></td></tr></table></div>
 </li>
-<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L350" class="view-source icon-eye-open"> </a><h3 id="methods_getstackdataset">getStackDataset(urlParams, param, successCallback, errorCallback)</h3>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L350" class="view-source icon-eye-open"> </a><h3 id="methods_getstackdataset">getStackDataset(urlParams, param, successCallback, errorCallback)</h3>
 <div class="getstackdataset"><div class="getstackdataset-page"><p>Obtains data as 1 or more series, which contain values with a timestamp (date) and a metric.</p>
 <p>If no dimension is selected, a single series is returned. The series represents the total for a metric.</p>
 <p>If a dimension is selelcted, several series are returned. Each series represents a metric value of the dimension.</p>
@@ -164,7 +164,7 @@ Service which wraps around a $resource object. The service contains several call
 </div></td></tr></tbody></table><h5 id="methods_getstackdataset_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getstackdataset-page"><p>promise Promise of the resources, which resolves to the data in array format</p>
 </div></td></tr></table></div>
 </li>
-<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/3883a4d/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L493" class="view-source icon-eye-open"> </a><h3 id="methods_gettables">getTables(urlParams, unused, successCallback, errorCallback)</h3>
+<li><a href="https://github.com/pulsarIO/pulsar-reporting-ui/blob/f347815/app/src/prReporting/prDatasource/prDatasourceSql/prDatasourceSqlService.js#L493" class="view-source icon-eye-open"> </a><h3 id="methods_gettables">getTables(urlParams, unused, successCallback, errorCallback)</h3>
 <div class="gettables"><div class="gettables-page"><p>Obtains the list of the tables in a given dataSource</p>
 </div><h5 id="methods_gettables_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>urlParams</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gettables-page"><p>Object which must include <code>dataSourceName</code>. e.g. <code>{dataSourceName: &#39;pulsar&#39;}</code></p>
 </div></td></tr><tr><td>unused</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="gettables-page"><p>No payload is needed as is created internally.</p>
