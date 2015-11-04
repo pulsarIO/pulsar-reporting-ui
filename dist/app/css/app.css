@@ -1,0 +1,80 @@
+/*******************************************************************************
+ *  Copyright (C) 2012-2015 eBay Software Foundation
+ *  This program is dual licensed under the MIT and Apache 2.0 licenses.
+ *  Please see LICENSE for more information.
+ *******************************************************************************/
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../assets/fonts/sourcesanspro-bold-webfont.eot');
+  src: url('../assets/fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/sourcesanspro-bold-webfont.woff2') format('woff2'), url('../assets/fonts/sourcesanspro-bold-webfont.woff') format('woff'), url('../assets/fonts/sourcesanspro-bold-webfont.ttf') format('truetype'), url('../assets/fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../assets/fonts/sourcesanspro-boldit-webfont.eot');
+  src: url('../assets/fonts/sourcesanspro-boldit-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/sourcesanspro-boldit-webfont.woff2') format('woff2'), url('../assets/fonts/sourcesanspro-boldit-webfont.woff') format('woff'), url('../assets/fonts/sourcesanspro-boldit-webfont.ttf') format('truetype'), url('../assets/fonts/sourcesanspro-boldit-webfont.svg#source_sans_probold_italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../assets/fonts/sourcesanspro-it-webfont.eot');
+  src: url('../assets/fonts/sourcesanspro-it-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/sourcesanspro-it-webfont.woff2') format('woff2'), url('../assets/fonts/sourcesanspro-it-webfont.woff') format('woff'), url('../assets/fonts/sourcesanspro-it-webfont.ttf') format('truetype'), url('../assets/fonts/sourcesanspro-it-webfont.svg#source_sans_proitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../assets/fonts/sourcesanspro-regular-webfont.eot');
+  src: url('../assets/fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'), url('../assets/fonts/sourcesanspro-regular-webfont.woff') format('woff'), url('../assets/fonts/sourcesanspro-regular-webfont.ttf') format('truetype'), url('../assets/fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.skin-blue .box.box-default {
+  border-top-color: #3c8dbc;
+}
+.bg-default {
+  color: white !important;
+}
+.skin-blue .bg-default {
+  background-color: #3c8dbc;
+}
+.main-header a.logo .logo-lg {
+  display: inline;
+}
+.main-header a.logo .logo-lg img {
+  height: 100%;
+  padding: 10px;
+}
+.main-header a.logo .logo-mini img {
+  padding: 10px;
+  width: 58px;
+}
+.main-header .logo,
+.main-header .navbar {
+  transition-duration: 0.3s;
+}
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer;
+}
+ul[typeahead-popup] {
+  max-height: 250px;
+  width: 100%;
+  overflow-y: scroll;
+}
+ul[typeahead-popup] a {
+  cursor: pointer;
+}
+nvd3 .nv-line .nvd3.nv-scatter .nv-groups .nv-point {
+  fill-opacity: 1 !important;
+}
+nvd3.interactive .nv-pieChart .nv-slice {
+  cursor: pointer;
+}
+nvd3 .nv-axis .nv-axisMaxMin text {
+  font-weight: normal !important;
+}

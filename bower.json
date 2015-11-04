@@ -50,7 +50,6 @@
   },
   "ignore": [
     "**/.*",
-    "app",
     "ngdoc_assets",
     "node_modules",
     "bower_components",

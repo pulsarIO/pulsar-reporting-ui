@@ -12,7 +12,11 @@
 /test
 
 
-dist/app
+dist/app/assets
+dist/app/fonts
+dist/app/**/lib.*
+dist/app/**/angular-modules.*
+
 dist/assets
 dist/node_modules
 
