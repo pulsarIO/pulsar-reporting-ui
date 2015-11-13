@@ -27,7 +27,7 @@
     "moment": "~2.10.6",
     "moment-timezone": "0.4.0",
     "countto": "~1.1.0",
-    "angular-bootstrap": "0.13.0",
+    "angular-bootstrap": "~0.14.3",
     "angular-moment": "0.10.0",
     "knex": "0.7.6",
     "jquery-ui": "~1.11.4",

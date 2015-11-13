@@ -174,16 +174,15 @@ angular.module('pr.UIOption')
          * @description Formats a date according to a granularity, shows a more detailed time if the granularity is higher.
          * @param  {date} date Date to format
          * @param  {string=} granularity (hour or minute)
-         * @param  {string=} timezone Timezone (MST)
          * @return {object} A date formatted by moment.js
          */
-        getxAxisTickFormat: function(date, granularity, timezone) {
+        getxAxisTickFormat: function(date, granularity) {
           if (granularity === 'hour') {
-            return moment(date).tz(timezone).format('MMM DD, HH:mm');
+            return moment(date).format('MMM DD, HH:mm');
           } else if (granularity === 'minute') {
-            return moment(date).tz(timezone).format('MMM DD, HH:mm');
+            return moment(date).format('MMM DD, HH:mm');
           } else {
-            return moment(date).tz(timezone).format('MMM DD');
+            return moment(date).format('MMM DD');
           }
         },
 

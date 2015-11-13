@@ -119,8 +119,7 @@ angular.module('pr.dashboard.widgets.timeline', [
             xAxis: {
               axisLabel: 'Time',
               tickFormat: function(d) {
-                console.lo
-                return prUIOptionService.getxAxisTickFormat(d, $scope.params.granularity, prApi.timezone);
+                return prUIOptionService.getxAxisTickFormat(d, $scope.params.granularity);
               }
             },
             showLegend: true

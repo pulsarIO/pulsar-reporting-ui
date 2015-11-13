@@ -1,5 +1,5 @@
 /*
- pulsar-reporting-ui | 0.2.0
+ pulsar-reporting-ui | 0.2.1
  Copyright (C) 2012-2015 eBay Software Foundation
  Licenses: MIT & Apache 2.0
 */
@@ -1263,16 +1263,15 @@ angular.module('pr.UIOption')
          * @description Formats a date according to a granularity, shows a more detailed time if the granularity is higher.
          * @param  {date} date Date to format
          * @param  {string=} granularity (hour or minute)
-         * @param  {string=} timezone Timezone (MST)
          * @return {object} A date formatted by moment.js
          */
-        getxAxisTickFormat: function(date, granularity, timezone) {
+        getxAxisTickFormat: function(date, granularity) {
           if (granularity === 'hour') {
-            return moment(date).tz(timezone).format('MMM DD, HH:mm');
+            return moment(date).format('MMM DD, HH:mm');
           } else if (granularity === 'minute') {
-            return moment(date).tz(timezone).format('MMM DD, HH:mm');
+            return moment(date).format('MMM DD, HH:mm');
           } else {
-            return moment(date).tz(timezone).format('MMM DD');
+            return moment(date).format('MMM DD');
           }
         },
 
@@ -3189,8 +3188,7 @@ angular.module('pr.dashboard.widgets.timeline', [
             xAxis: {
               axisLabel: 'Time',
               tickFormat: function(d) {
-                console.lo
-                return prUIOptionService.getxAxisTickFormat(d, $scope.params.granularity, prApi.timezone);
+                return prUIOptionService.getxAxisTickFormat(d, $scope.params.granularity);
               }
             },
             showLegend: true
