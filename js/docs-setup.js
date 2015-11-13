@@ -630,7 +630,7 @@ NG_DOCS={
       "shortName": "prUIOptionService",
       "type": "service",
       "moduleName": "pr.UIOption",
-      "keywords": "api bar build celltemplate chart create defaults deprecated detailed directives discretebarchart expected filters format formats formatted full getdiscretebarchartoptions getfiltergridoptions getgridoptions getgroupedbarchartoptions getindexcelltemplate getlinewithfocusoptions getpiechartoptions getsimplegridoptions getstackedareachartoptions gettimelinechartoptions getxaxistickformat granularity grid header higher html js linechart linewithfocuschart list method minute moment multibarchart nvd3 object options pagination piechart pr precendence returns service simple simpler stackedareachart string template time timezone ui-grid uioption"
+      "keywords": "api bar build celltemplate chart create defaults deprecated detailed directives discretebarchart expected filters format formats formatted full getdiscretebarchartoptions getfiltergridoptions getgridoptions getgroupedbarchartoptions getindexcelltemplate getlinewithfocusoptions getpiechartoptions getsimplegridoptions getstackedareachartoptions gettimelinechartoptions getxaxistickformat granularity grid header higher html js linechart linewithfocuschart list method minute moment multibarchart nvd3 object options pagination piechart pr precendence returns service simple simpler stackedareachart string template time ui-grid uioption"
     }
   ],
   "apis": {
